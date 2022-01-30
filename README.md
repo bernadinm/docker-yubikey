@@ -8,19 +8,15 @@ GPG_TTY=$(tty)
 export GPG_TTY
 ```
 
-### .gnupg/gnu-agent.conf
-This is `COPY` into docker to allow it to attempt to enable ssh-support.
+### init.sh
+This section below is required to perform ssh access via gpg-agent.
 
-This section below is required to perform ssh access via gpg-agent. 
+Without this, you won't be able to use the yubikey when attempting to ssh from github.
 
 ```bash
 gpg-connect-agent updatestartuptty /bye
 ```
 
-```bash
-$ cat .gnupg/gpg-agent.conf
-enable-ssh-support
-```
 ### .ssh/config
 This is `COPY` into docker to allow it to stop prompting for the following message to make it less interactive:
 

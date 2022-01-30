@@ -12,7 +12,6 @@ RUN curl -sSL gpg.miguel.engineer | gpg --import -
 RUN gpgconf --list-dirs agent-ssh-socket
 ENV SSH_AUTH_SOCK=/root/.gnupg/S.gpg-agent.ssh
 
-COPY .gnupg/gpg-agent.conf /root/.gnupg/gpg-agent.conf
 COPY init.sh .
 RUN chmod 700 init.sh
 
