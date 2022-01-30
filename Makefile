@@ -21,3 +21,6 @@ exec:
 	    -v /dev/hidraw12/:/dev/hidraw12/ \
 	    --privileged \
 	    yubikey-test
+
+clean:
+	docker rmi yubikey-test
