@@ -27,6 +27,8 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added 'github.com,192.30.255.112' (ECDSA) to the list of known hosts.
 ```
 
+In order for this to work, you must determine your own `/dev/hidraw[0-1]{2}` value as this changes per port. Once used, you can run the following commands below.
+
 ```bash
 #!/bin/bash
 
